@@ -1,0 +1,12 @@
+1.  stdint.h is a library which provides a set of typedefs to make integers of a standard width. This will standardize the integer width over different systems.
+2.  this will ensure that the int will be the same size regardless of the system memory allocation (64-bit or 32-bit system) that the program is run on.
+3.  1, 4, 4, 2.
+4.  the first two bytes of bitmapfileheader are a WORD bfType must be 'BM'
+5.  bfSize vs biSize? bfSize is the size in bytes of the bitmap file which includes the header info. biSize is the number of bytes required by the structure.
+6.  if biHeight is negative? it indicates a top-down DIB
+7.  biBitCount specifies the color depth.
+8.  fopen might return null if the input or output files are not accessible.
+9.  the third argument to fread is always 1 in our code because we are reading each individual structure one at a time
+10. What value does line 65 of copy.c assign to padding if bi.biWidth is 3? 3
+11. what does FSEEK do? it "fast forwards" to skip any part of the file
+12. What is SEEK_CUR? SEEK_CUR means to start the seeking from the current position in the file pointer.

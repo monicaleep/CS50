@@ -1,0 +1,13 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+    It is the longest word in our "large" dictionary at 45 letters. It is a lung disease caused by inhalation of quartz dust
+1.  According to its man page, what does getrusage do?
+    It gets resource usage for a program.
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+    18 - 2 structs and 16 longs
+3.  Why do you think we pass before and after by reference (instead of by value) to calculate, even though we’re not changing their contents?
+    Because the actual values of rusage are quite large to copy over, so it would be easier just to make a pointer to the value to save memory.
+4.  TODO
+5.  why are we using fgetc instead of fscanf?
+    because we know the size on one Char and can avoid dynamically allocating memory for a changing length string from fscanf. also since fscanf reads a whole word at once, we would need to put an extra step anyways to check for any numbers or ' 
+6.  Why do you think we declared the parameters for check and load as const (which means "constant")?
+    to avoid accidentally modifying them in the functions 
