@@ -44,27 +44,3 @@ main td
     /* left-align tables' cells */
     text-align: left;
 }
-table {
-    margin-right:auto;
-    margin-left:auto;
-}
-table tr:nth-child(even) {
-    background-color: #eee;
-}
-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-table th {
-    color: white;
-    background-color: #008080;
-}
-th, td{
-    padding: 5px 20px 5px 20px;
-}
-td:last-child{
-    text-align:right;
-}
-.sub{
-    font-weight:bold;
-    text-align:center;
-}

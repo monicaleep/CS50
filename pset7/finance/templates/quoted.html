@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<p>
+    <b>{{quote['name']}}</b><br>
+    <b>({{quote['symbol']}})</b><br><br> ${{quote['price']}} per share.
+</p>
+{% endblock %}

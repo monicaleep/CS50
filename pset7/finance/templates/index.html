@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table style:"width=100%">
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Value</th>
+    </tr>
+    {%for stock in stocks %}
+    <tr>
+        <td>{{stock.stock_name}}</td>
+        <td>{{stock.quantity}}</td>
+        <td>${{"{0:0.2f}".format(worths[stock.stock_name])}}</td>
+        <td>${{"{0:0.2f}".format(stock.quantity * worths[stock.stock_name])}}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td class="sub" colspan="3">Total Portfolio Value</td>
+        <td>${{"{0:0.2f}".format(total)}} </td>
+    </tr>
+    <tr>
+        <td class="sub" colspan="3">Cash in Hand:</td>
+        <td>${{"{0:0.2f}".format(cash)}}</td>
+    </tr>
+    <tr>
+        <td class="sub" colspan="3">Grand Total:</td>
+        <td>${{"{0:0.2f}".format(grand)}}</td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table style:"width=100%">
+    <tr>
+        <th>Symbol</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Date</th>
+    </tr>
+    {%for item in rows %}
+    <tr>
+        <td>{{item.symbol}}</td>
+        <td>{{item.quantity}}</td>
+        <td>${{"{0:0.2f}".format(item.price)}}</td>
+        <td>{{item.date}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}
